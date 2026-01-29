@@ -3,120 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日本次世代科学ジャーナル | 投稿募集</title>
+    <title>ジュニアサイエンスジャーナル | 機械学習・量子計算</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a365d;
-            --accent-color: #3182ce;
-            --bg-color: #f7fafc;
-            --text-color: #2d3748;
+            --primary: #1e293b;
+            --accent: #0ea5e9;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
         }
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif; line-height: 1.8; color: #334155; margin: 0; background: var(--bg-light); }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        /* ヒーローセクション */
         header {
-            text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(135deg, var(--primary-color) 0%, #2a4365 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
-            border-radius: 0 0 50px 50px;
+            padding: 100px 0;
+            text-align: center;
         }
-        h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.05em; }
-        .subtitle { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
-        
-        section {
-            background: white;
+        .logo { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+        .tagline { font-size: 1.2rem; opacity: 0.8; }
+
+        .card {
+            background: var(--white);
             padding: 40px;
-            margin-top: -40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-top: -50px;
+            margin-bottom: 40px;
         }
-        h2 { border-left: 5px solid var(--accent-color); padding-left: 15px; color: var(--primary-color); }
-        
-        .fields {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .field-card {
-            background: #edf2f7;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .cta-button {
-            display: block;
-            width: fit-content;
-            margin: 40px auto;
-            padding: 18px 40px;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .cta-button:hover {
-            background-color: #2b6cb0;
-            transform: translateY(-2px);
-        }
-        
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #718096; }
+        h2 { color: var(--primary); font-size: 1.8rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-bottom: 30px; }
+        h3 { color: var(--accent); margin-top: 30px; }
+
+        /* 査読システム */
+        .review-flex { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+        .review-item { flex: 1; min-width: 280px; background: #f1f5f9; padding: 25px; border-radius: 10px; }
+        .review-item.ai { border: 2px dashed var(--accent); background: #f0f9ff; }
+
+        /* ステップ */
+        .step-list { list-style: none; padding: 0; }
+        .step-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .step-num { background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; flex-shrink: 0; font-weight: bold; }
+
+        /* ボタン */
+        .cta-wrap { text-align: center; margin: 60px 0; }
+        .btn { padding: 18px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; display: inline-block; margin: 10px; }
+        .btn-main { background: var(--accent); color: white; }
+        .btn-sub { border: 2px solid var(--primary); color: var(--primary); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        footer { background: #0f172a; color: #94a3b8; padding: 60px 0; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="container">
-        <h1>次世代科学技術ジャーナル</h1>
-        <p class="subtitle">機械学習と量子計算の未来を拓く、中高生のための査読付論文誌</p>
+        <div class="logo">Junior Science Journal</div>
+        <p class="tagline">機械学習・量子計算分野の探究を、2+1のハイブリッド査読で加速させる。</p>
     </div>
 </header>
 
 <div class="container">
-    <section>
-        <h2>募集概要</h2>
-        <p>本ジャーナルは、日本の中高生による「機械学習（ML）」および「量子計算（QC）」分野の研究成果を、専門家による査読を経て広く発信するオープンアクセス・ジャーナルです。</p>
-        
-        <h3>対象分野</h3>
-        <div class="fields">
-            <div class="field-card">機械学習 / AI</div>
-            <div class="field-card">量子アルゴリズム</div>
-            <div class="field-card">データサイエンス</div>
-            <div class="field-card">量子計算の実機検証</div>
+    <section class="card">
+        <h2>ジュニアサイエンスジャーナル(JSJ)とは</h2>
+        <p>本ジャーナルは、次世代を担う中高生研究者が、自らの研究成果を「学術論文」として世に問うためのプラットフォームです。株式会社の運営支援により、プロフェッショナルな審査環境とオープンアクセスな公開を無償で提供します。</p>
+
+        <h3>独自の「2+1」査読体制</h3>
+        <p>公平かつ精緻な審査を実現するため、人間とAIが協力する新しい形の査読を導入しています。</p>
+        <div class="review-flex">
+            <div class="review-item">
+                <i class="fas fa-user-friends fa-2x" style="color:var(--primary)"></i>
+                <h4>人間査読者 (2名)</h4>
+                <p>専門の研究者や大学院生が、研究の独創性やプロセスを評価し、温かいアドバイスを送ります。</p>
+            </div>
+            <div class="review-item ai">
+                <i class="fas fa-microchip fa-2x" style="color:var(--accent)"></i>
+                <h4>AI査読 (1名)</h4>
+                <p>最新のLLMが、論理の飛躍や数式の整合性、コードの実行可能性を客観的に検証します。</p>
+            </div>
         </div>
-
-        <h3>応募資格</h3>
-        <ul>
-            <li>日本国内の中学校・高等学校・高等専門学校（3年次まで）に在籍する生徒</li>
-            <li>個人またはグループでの投稿が可能</li>
-            <li>指導教員または保護者の同意を得ていること</li>
-        </ul>
-
-        <h3>投稿形式</h3>
-        <p>PDF形式（数式はLaTeX推奨、Wordも可）。詳細はGoogle フォーム内の投稿規定をご確認ください。</p>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0d0j7qYBI1vJSkTIbaQsndqg-FRg7m7NYl_wqrPf8WFuqXQ/viewform?usp=dialog" class="cta-button">論文を投稿する（Google フォーム）</a>
     </section>
 
-    <footer>
-        &copy; 2026 Your Company Name. All Rights Reserved.
-    </footer>
+    <section class="card">
+        <h2>投稿のご案内</h2>
+        <div class="step-list">
+            <div class="step-item"><div class="step-num">1</div><div><strong>執筆:</strong> 数式はLaTeX推奨（Wordも可）。GitHub等でのコード公開を歓迎します。</div></div>
+            <div class="step-item"><div class="step-num">2</div><div><strong>提出:</strong> 下記のGoogle フォームからPDFをアップロードしてください。</div></div>
+            <div class="step-item"><div class="step-num">3</div><div><strong>査読:</strong> 2+1体制で審査。修正が必要な場合は事務局からご連絡します。</div></div>
+            <div class="step-item"><div class="step-num">4</div><div><strong>掲載:</strong> 採択された論文は、当サイトのアーカイブに永久保存・公開されます。</div></div>
+        </div>
+
+        <div class="cta-wrap">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0d0j7qYBI1vJSkTIbaQsndqg-FRg7m7NYl_wqrPf8WFuqXQ/viewform" class="btn btn-main">論文を投稿する</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>運営メンバー募集</h2>
+        <p>「次世代の科学教育に貢献したい」研究者、エンジニア、学生の方々を随時募集しています。あなたの専門知識を、未来の科学者のために活かしてみませんか？</p>
+        <ul>
+            <li>機械学習・量子計算・数学・物理などの査読担当</li>
+            <li>ジャーナルの広報、Web編集</li>
+        </ul>
+    </section>
 </div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 ジュニアサイエンスジャーナル事務局 (blueqat株式会社)</p>
+        <p>All Research Papers are published under CC BY 4.0 license.</p>
+    </div>
+</footer>
 
 </body>
 </html>
